@@ -22,4 +22,4 @@ jobs:
           name: ibuysausage-neovim-nightly
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
       - run: nix build .#neovim .#tree-sitter
-      - run: nix-shell --run "echo OK"
+      - run: nix develop -c echo OK
